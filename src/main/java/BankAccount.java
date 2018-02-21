@@ -27,9 +27,36 @@ public class BankAccount {
     private double interestEarned;
 
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        this.ownerName = name;
+        this.accountType = accountCategory;
+        Bank.totalAccounts++;
+    }
+
+    public void setAccountNumber(int setNum) {
+        this.accountNumber = setNum;
+
+    }
+
+    public int getAccountNumber() {
+        return this.accountNumber;
+
+    }
+
+    public void setOwnerName(String name) {
+        this.ownerName = name;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void withdrawl(double amount) {
+        this.accountBalance -= amount;
+
+    }
+
+    public void deposit(double amount) {
+        this.accountBalance += amount;
     }
 
     /*
